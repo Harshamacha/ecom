@@ -1,0 +1,12 @@
+<div>
+    <h1>{{ product.name }}</h1>
+    <img src="{{ product.imagepath }}" alt="{{ product.name }}" style="width:400px;height:auto;">
+    <p>{{ product.description }} </p>
+    <p>Price: {{ product.price }} {{ product.price_unit }}</p>
+    <p>Manufacturer: {{ product.manufacturer }}</p>
+    <p>Created: {{ product.created }}</p>
+    <p>Updated: {{ product.updated }}</p>
+    <p><a href="/products/{{ product.id }}/update/">Edit</a></p>
+    <p><a href="/products/{{ product.id }}/delete/">Delete</a></p>
+  </div>
+  
