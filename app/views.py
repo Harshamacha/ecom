@@ -7,9 +7,8 @@ from rest_framework.parsers import JSONParser
 from .serializers import ProductSerializer
 from django.http import JsonResponse
 from .models import Product
-from django.http import JsonResponse
 from django.shortcuts import render
-
+import json
 def index(request):
     if request.method  =='POST':
         payload =json.loads1(request.body)
@@ -27,7 +26,7 @@ class ProductCreateView(CreateView):
     model = Product
     fields = ['name', 'description', 'imagepath', 'price', 'manufacturer']
     template_name = 'product_form.html'
-    success_url = reverse_lazy('product_list')
+    success_url = reverse_lazy('product-list')
 
 class ProductListView(ListView):
     model = Product
