@@ -30,7 +30,7 @@ class ProductCreateView(CreateView):
 
 class ProductListView(ListView):
     model = Product
-    template_name = 'product-list.html'
+    template_name = 'product_list.html'
     context_object_name = 'products'
 
 class ProductDetailView(DetailView):
